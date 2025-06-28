@@ -32,26 +32,35 @@ This project is a Python-based algorithmic trading bot that:
 
 ---
 
-## 📂 Project Structure
-```bash
-.
-├── main.py                 # Main execution script
-├── config.py               # Google Sheets + Telegram config
-├── requirements.txt        # All required Python packages
-├── .github/workflows/
-│   └── main.yml            # GitHub Actions workflow (runs daily)
-├── utils/
-│   └── strategy.py         # Strategy logic and indicators
-├── data/                   # Saved data (optional)
-├── logs/                   # Logs trades & messages (optional)
-├── README.md               # You are here
-└── .gitignore              # Excludes sensitive files
-```
-## 🔐 GitHub Secrets (Required)
+algo-trading-ensemble-ml-bot/
+│
+├── 📄 .env                         → Environment variables (API keys, Telegram tokens)
+├── 📄 .gitignore                   → Ignore credentials, cache, etc. in Git
+├── ⚙️ config.py                    → Central config: stock list, sheet names, paths
+├── 🔒 credentials.json             → Google Service Account credentials (⚠️ do NOT upload)
+├── 🚀 main.py                      → Main script: fetch data → backtest → ML → log → notify
+├── 📝 README.md                    → Project overview and documentation
+├── 📦 requirements.txt             → Python dependencies (yfinance, XGBoost, gspread, etc.)
+│
+├── 📁 .github/
+│   └── 🔄 workflows/
+│       └── main.yml               → Optional GitHub Actions automation (CI/CD)
+│
+├── 📁 utils/                       → Core logic organized by role
+│   ├── 📊 backtester.py           → Simulates trading and calculates performance
+│   ├── 🔍 data_fetcher.py         → Pulls stock data from Yahoo Finance (yfinance)
+│   ├── 📋 google_sheets.py        → Logs trades & applies formatting in Google Sheets
+│   ├── 📈 indicators.py           → Calculates RSI, moving averages, MACD, etc.
+│   ├── 🤖 ml_model.py             → Stacking ML model (LR + RF + XGBoost)
+│   ├── 📣 notifier.py             → Sends trade alerts via Telegram bot
+│   ├── 🧠 strategy.py             → Encapsulates RSI + DMA crossover strategy
+│   └── 🧪 tempCodeRunnerFile.py   → Temporary script (can be ignored or removed)
+│
+└── 📁 __pycache__/                → Auto-generated Python bytecode (ignored in Git)
 
-Secret Name	Description
-ENCODED_GOOGLE_CREDS	Base64 string of credentials.json
-TELEGRAM_BOT_TOKEN	Your bot’s token from BotFather
-TELEGRAM_CHAT_ID	Your chat ID from /getUpdates API
 
 
+🛠️ Developed By
+Built with 💻 by Krunal Wankhade
+📬 Connect on LinkedIn
+🚀 Passionate about AI, trading systems, and clean, scalable code.
