@@ -75,10 +75,10 @@ def run_trading_job():
         except Exception as e:
             print(f"⚠️ Telegram message failed: {e}")
 
-    try:
-        apply_conditional_formatting()
-    except Exception as e:
-        print(f"⚠️ Failed to apply conditional formatting: {e}")
+    # try:
+    #     apply_conditional_formatting()
+    # except Exception as e:
+    #     print(f"⚠️ Failed to apply conditional formatting: {e}")
 
 # 🔁 Run job once manually
 run_trading_job()

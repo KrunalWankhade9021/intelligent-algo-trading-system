@@ -26,7 +26,12 @@ def train_model(df):
     # Define base models
     base_models = [
         ('rf', RandomForestClassifier(n_estimators=100, max_depth=5, random_state=42)),
-        ('xgb', XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42))
+        ('xgb', XGBClassifier(
+            use_label_encoder=False,
+            eval_metric='logloss',
+            verbosity=0,  # Suppress learner.cc warnings
+            random_state=42
+        ))
     ]
 
     # Define meta-learner
