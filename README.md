@@ -54,15 +54,4 @@ ENCODED_GOOGLE_CREDS	Base64 string of credentials.json
 TELEGRAM_BOT_TOKEN	Your bot’s token from BotFather
 TELEGRAM_CHAT_ID	Your chat ID from /getUpdates API
 
-## 🛠️ Setup Instructions (For Local Use)
-
-git clone https://github.com/ArpitChb2704/algo-trading-system.git
-cd algo-trading-system
-
-python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
-
-pip install -r requirements.txt
-
-python main.py
 
