@@ -1,0 +1,29 @@
+name: Daily Algo Trading Bot
+
+on:
+  schedule:
+    - cron: '45 3 * * *'  # Runs at 9:15 AM IST (3:45 AM UTC)
+  workflow_dispatch:
+
+jobs:
+  run-trading-bot:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
+
+    - name: Run bot
+      env:
+        ENCODED_GOOGLE_CREDS: ${{ secrets.ENCODED_GOOGLE_CREDS }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+      run: python main.py

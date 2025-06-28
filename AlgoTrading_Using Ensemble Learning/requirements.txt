@@ -1,0 +1,9 @@
+yfinance
+pandas
+numpy
+schedule
+scikit-learn
+matplotlib
+gspread
+oauth2client
+requests
