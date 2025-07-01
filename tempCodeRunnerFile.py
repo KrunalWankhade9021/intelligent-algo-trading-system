@@ -92,7 +92,9 @@ def run_trading_job():
 run_trading_job()
 
 # Optional: Schedule to run daily
-# schedule.every().day.at("09:15").do(run_trading_job)
-# while True:
-#     schedule.run_pending()
-#     time.sleep(60)
+schedule.every().day.at("09:15").do(run_trading_job)
+while True:
+    schedule.run_pending()
+    time.sleep(60)
+
+
