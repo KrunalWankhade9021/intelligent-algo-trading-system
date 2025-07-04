@@ -115,8 +115,8 @@ algo-trading-ensemble-ml-bot/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/algo-trading-ensemble-ml-bot.git
-   cd algo-trading-ensemble-ml-bot
+   git clone https://github.com/KrunalWankhade9021/intelligent-algo-trading-system.git
+   cd intelligent-algo-trading-system
    ```
 
 2. **Install dependencies**
@@ -221,19 +221,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-🚀 **Passionate about**: AI, quantitative trading, and building scalable financial systems that bridge technology and markets.
-
----
-
-## ⚠️ Disclaimer
-
-This software is for educational and research purposes only. Trading financial instruments involves substantial risk and may not be suitable for all investors. Past performance does not guarantee future results. Always consult with a qualified financial advisor before making investment decisions.
-
----
-
-## 🔗 Related Projects
-
-- [Kadane-Adv](https://pypi.org/project/kadane-adv/) - Advanced subarray optimization library
 
 
----
